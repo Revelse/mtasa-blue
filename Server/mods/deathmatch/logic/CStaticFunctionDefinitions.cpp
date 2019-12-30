@@ -1284,9 +1284,11 @@ bool CStaticFunctionDefinitions::SetElementVisibleTo(CElement* pElement, CElemen
             pEntity->AddVisibleToReference(pReference);
         else
             pEntity->RemoveVisibleToReference(pReference);
+
+        return true;
     }
 
-    return true;
+    return false;
 }
 
 bool CStaticFunctionDefinitions::SetElementInterior(CElement* pElement, unsigned char ucInterior, bool bSetPosition, CVector& vecPosition)
